@@ -66,13 +66,6 @@ belongs_to :group
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-### validation
-validates :message_or_image, presence: true
-
-private
-  def email_or_phone
-    message.presence or image.presence
-  end
 
 ### Association
 belongs_to :user
