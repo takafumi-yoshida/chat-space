@@ -32,15 +32,15 @@ Things you may want to cover:
 
 ### Association
 has_many :user_groups
-has_many :user_groups, through :user
+has_many :groups, through: :user_groups
 has_many :messages
 
 
-## chat-groupsテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
+|name|string|null: false|
 
 
 ### Association
@@ -53,21 +53,29 @@ has_many :messages
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
-|chat_group_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 ### Association
 belongs_to :user
-belongs_to :chat_group
+belongs_to :group
 
 ## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|message|text|null: false|
-|image|string|null: false|
+|message|text|
+|image|string|
 |user_id|integer|null: false, foreign_key: true|
-|chat_group_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### validation
+validates :message_or_image, presence: true
+
+private
+    def email_or_phone
+      message.presence or image.presence
+    end
 
 ### Association
 belongs_to :user
-belongs_to :chat_group
+belongs_to :group
