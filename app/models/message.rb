@@ -4,8 +4,8 @@ class Message < ApplicationRecord
   belongs_to :group
   
   private
-    def message_or_image
-      message.presence or image.presence
-    end
+  def message_or_image
+    message.presence or image.presence
+  end
 
 end

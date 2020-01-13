@@ -72,9 +72,9 @@ belongs_to :group
 validates :message_or_image, presence: true
 
 private
-    def email_or_phone
-      message.presence or image.presence
-    end
+  def email_or_phone
+    message.presence or image.presence
+  end
 
 ### Association
 belongs_to :user
