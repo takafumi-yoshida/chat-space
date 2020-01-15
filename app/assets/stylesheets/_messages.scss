@@ -26,7 +26,7 @@
         }
         &__icon {
           width: 60px;
-          & .contents_btn {
+           .contents_btn {
             float: right;
             margin-left: 5px;
             color: #ffffff;
@@ -149,7 +149,7 @@
     }
       .message-form__btn{
         margin-left: 15px;
-        & .contents__btn {
+        .contents__btn {
           width: 95px;
           height: 50px;
           line-height: 50px;
