@@ -22,6 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+## userテーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
