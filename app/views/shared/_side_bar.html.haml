@@ -1,0 +1,18 @@
+.side-bar
+  .side-bar__user-name
+    .top-items
+      .top-items__name
+        kouso
+      .top-items__icon
+        = link_to edit_user_path(current_user), class: "contents_btn" do
+          = icon("fa", "fas fa-cog")
+        = link_to new_group_path, class: "contents_btn" do
+          = icon("fa", "fas fa-edit")
+  .side-bar__group-list
+    - current_user.groups.each do |group|
+      .group-list__head
+        = link_to '#', class: "decoration_none" do
+          .group-name
+            = group.name
+          .new-message
+            messageはたくさんあります
