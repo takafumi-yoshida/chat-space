@@ -5,6 +5,8 @@
 .wrapper {
   display: flex;
   
+ 
+
   .side-bar {
     width: 300px;
     height: 100vh;
@@ -21,10 +23,13 @@
         height: 20px;
         margin: 0 auto;
         &__name {
+          color: #ffffff;
           font-size: 16px;
+          font-weight: bold;
           line-height: 20px;
         }
         &__icon {
+          font-size: 14px;
           width: 60px;
            .contents_btn {
             float: right;
@@ -49,6 +54,7 @@
         color: #ffffff;
         font-weight: bold;
         text-decoration: none;
+        overflow: scroll;
         .decoration_none {
           text-decoration: none;
           .group-name {
@@ -76,6 +82,7 @@
       .group-info__left {
         padding-left: 40px;
         .left__group-name {
+          width: vw;
           padding-top: 35px;
           color: #333333;
           font-size: 20px;
@@ -106,6 +113,7 @@
       height: calc(100vh - 190px);
       padding: 35px 0 0 40px;
       background-color: #fafafa;
+      overflow: scroll;
       .message-box {
         margin-bottom: 46px;
         .message-box__group-name {
@@ -125,47 +133,52 @@
       }
     }
     &__message-form{
-      display: flex;
-      justify-content: space-between;
-      height: 90px;
-      padding: 0 40px 0 40px;
-      background-color: #d2d2d2;
-      align-items: center;
-      .message-form__contents {
+      
+      .form_content {
         display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 0 10px;
-        background-color: #ffffff;
-        .message-box {
-          width: 100%;
-          height : 50px;
-          line-height: 50px;
-        }
-        .input-box__image { 
-          color: black;
-          font-size: 22px;
-          cursor: pointer;
-          line-height: 50px;
-            .input_none {
-              display: none;
+        align-items: center;
+        position: relative;
+        height: 90px;
+        padding: 0 40px 0 40px;
+        background-color: #d2d2d2;
+        .message-form{
+          position: relative;
+          .message-box {
+            width: 65vw;
+            padding: 0 40px 0 10px;
+            background-color: #ffffff;
+            height : 50px;
+            line-height: 50px;
+          }
+          .input-box__image { 
+            overflow: hidden;
+            position: absolute;
+            right: 11px;
+            color: black;
+            font-size: 22px;
+            cursor: pointer;
+            line-height: 50px;
+              .input_none {
+                display: none;
+              }
             }
         }
-      }
-    }
-      .message-form__btn{
-        margin-left: 15px;
-        .contents__btn {
-          width: 95px;
-          height: 50px;
-          line-height: 50px;
-          text-align: center;
-          display: block;
-          font-size: 16px;
-          text-decoration: none;
-          background-color: #38aef0;
-          color: #ffffff;
+        
+        .message-form__btn{
+          margin-left: 15px;
+          .contents__btn {
+            width: 95px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            display: block;
+            font-size: 16px;
+            text-decoration: none;
+            background-color: #38aef0;
+            color: #ffffff;
+          }
         }
       }
+    }   
   }
 }
