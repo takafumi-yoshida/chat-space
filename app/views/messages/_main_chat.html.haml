@@ -16,7 +16,7 @@
   .chat-main__message-form
     = form_for [@group, @message], html: { class: "form_content" } do |f|
       .message-form
-        = f.text_field :content, placeholder: 'type a message', class: 'message-box'
+        = f.text_field :content, placeholder: 'type a message', class: 'message-box2'
         = f.label :image, class: "input-box__image" do
           = icon('fas', 'image', class: 'icon')
           = f.file_field :image, class: 'input_none'
