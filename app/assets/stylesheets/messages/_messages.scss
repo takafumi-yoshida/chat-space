@@ -133,7 +133,7 @@
       }
     }
     &__message-form{
-      
+      box-sizing: border-box;
       .form_content {
         display: flex;
         align-items: center;
@@ -142,18 +142,19 @@
         padding: 0 40px 0 40px;
         background-color: #d2d2d2;
         .message-form{
+          width: 100%;
           position: relative;
+          border: 1px solid red;
           .message-box2 {
-            width: 65vw;
+            width: 100%;
             padding: 0 40px 0 10px;
             background-color: #ffffff;
             height : 50px;
             line-height: 50px;
           }
           .input-box__image { 
-            overflow: hidden;
             position: absolute;
-            right: 11px;
+            right: 10px;
             color: black;
             font-size: 22px;
             cursor: pointer;
@@ -175,7 +176,7 @@
             font-size: 16px;
             text-decoration: none;
             background-color: #38aef0;
-            color: #ffffff;
+            color: #ffffff; 
           }
         }
       }
